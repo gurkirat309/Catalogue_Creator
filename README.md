@@ -22,7 +22,7 @@ It supports **partial images, standardized descriptions, stable layouts**, and *
 
 ## 🏗️ Project Structure
 
-## 🏗️ Project Structure
+
 
 ```text
 catalogue_project/
@@ -40,7 +40,9 @@ catalogue_project/
 ├── fix_missing_dimensions.py
 │
 └── catalogue.pdf
+```
 
+---
 
 
 
