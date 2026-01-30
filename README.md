@@ -1,194 +1,162 @@
-📦 AI-Assisted Product Catalogue Generator
+# 📦 Product Catalogue PDF Generator
 
-This project automates the creation of a professional, print-ready product catalogue PDF from a simple Excel file.
-It is designed for large product inventories (300+ items) where manual catalogue creation is time-consuming and error-prone.
+A production-ready pipeline to generate a **clean, professional, print-ready product catalogue PDF** from an Excel file.
 
-The pipeline combines data structuring, image management, rule-based content generation, and HTML-to-PDF rendering to produce a consistent, client-ready catalogue.
+This project is built for **large inventories (300+ products)** where manual catalogue creation becomes impractical.  
+It supports **partial images, standardized descriptions, stable layouts**, and **Windows-safe PDF generation**.
 
-✨ Key Features
+---
 
-📊 Excel-driven workflow – single source of truth
+## ✨ Features
 
-🖼️ Automatic + manual image support
+- 📊 Excel-driven catalogue generation  
+- 🖼️ Automatic + manual image handling  
+- 📝 Rule-based product descriptions & features  
+- 📐 Standardized industry dimensions  
+- 📄 Stable PDF output (A4, print-ready)  
+- 📑 **Exactly 2 products per page**  
+- 🧱 Blank image placeholders when photos are missing  
+- 🔁 Fully re-generatable (no manual PDF edits)
 
-Uses images from a local folder
+---
 
-Gracefully handles missing images with blank placeholders
+## 🏗️ Project Structure
 
-📝 Automated product descriptions & features
-
-Rule-based (stable, consistent, no hallucinations)
-
-📐 Standardized industry dimensions
-
-📄 High-quality PDF output
-
-Exactly 2 products per page
-
-Clean layout
-
-Print-friendly (A4)
-
-🔁 Re-runnable & editable
-
-Replace images → regenerate PDF
-
-Update Excel → regenerate PDF
-
-🏗️ Project Structure
 catalogue_project/
 │
 ├── data/
-│   └── master_products.xlsx        # Final structured product data
+│ └── master_products.xlsx
 │
-├── images/                          # Product images (manual or auto-added)
-│   └── P001_product_name.jpg
+├── images/
+│ └── P001_product_name.jpg
 │
 ├── templates/
-│   └── catalogue.html               # wkhtmltopdf-safe HTML template
+│ └── catalogue.html
 │
-├── generate_pdf.py                  # Generates final PDF
-├── fix_missing_descriptions.py      # Fills missing descriptions & features
-├── fix_missing_dimensions.py        # Fills missing dimensions
+├── generate_pdf.py
+├── fix_missing_descriptions.py
+├── fix_missing_dimensions.py
 │
-└── catalogue.pdf                    # Final output
+└── catalogue.pdf
 
-📥 Input Requirements
-1️⃣ Excel File (master_products.xlsx)
+
+---
+
+## 📥 Input Requirements
+
+### 1️⃣ Excel File (`master_products.xlsx`)
 
 Required columns:
 
-Product_ID
+| Column Name | Description |
+|------------|-------------|
+| Product_ID | Unique product identifier |
+| Product_Name | Product name |
+| Category | Product category |
+| Sub_Category | Product sub-category |
+| Description | Product description |
+| Features | Bullet-point features |
+| Dimensions | Approximate dimensions |
+| Image_Path | Local image path (optional) |
 
-Product_Name
+---
 
-Category
+### 2️⃣ Images Folder (`images/`)
 
-Sub_Category
-
-Description
-
-Features
-
-Dimensions
-
-Image_Path (optional)
-
-The Excel file is auto-generated and enriched during earlier steps of the pipeline.
-
-2️⃣ Images Folder (images/)
-
-Image filenames must match the Image_Path or Product_ID
-
-Example:
-
+- Image filenames must match `Product_ID`
+- Example:
 P051_all_in_one_eyelash_brushcomb.jpg
 
+- If an image is missing:
+- Layout stays intact
+- Blank placeholder is shown
 
-If an image is missing:
+---
 
-A blank image placeholder is shown
+## 🛠️ Tech Stack
 
-Layout remains intact
+- Python
+- Pandas
+- Jinja2
+- wkhtmltopdf
+- pdfkit
 
-🛠️ Tech Stack
+> `wkhtmltopdf` is used for **maximum stability on Windows**.
 
-Python
+---
 
-Pandas – data handling
+## ⚙️ Setup Instructions
 
-Jinja2 – HTML templating
+### 1️⃣ Install wkhtmltopdf (Windows)
 
-wkhtmltopdf – HTML → PDF rendering
+Download from:
+https://wkhtmltopdf.org/downloads.html
 
-pdfkit – Python wrapper for wkhtmltopdf
-
-wkhtmltopdf is used instead of WeasyPrint for maximum stability on Windows.
-
-⚙️ Setup Instructions
-1️⃣ Install wkhtmltopdf (Windows)
-
-Download and install:
-👉 https://wkhtmltopdf.org/downloads.html
 
 Verify installation:
-
+```bash
 wkhtmltopdf --version
-
-2️⃣ Install Python dependencies
+2️⃣ Install Python Dependencies
 pip install pandas jinja2 pdfkit openpyxl
-
-3️⃣ (Optional) Fix missing data
-
+🧹 Fix Missing Content (Optional)
 If descriptions or dimensions are missing:
 
 python fix_missing_descriptions.py
 python fix_missing_dimensions.py
+These scripts:
 
-📄 Generate the Catalogue PDF
+Do NOT use AI
+
+Ensure 100% consistency
+
+Are safe to run multiple times
+
+📄 Generate the PDF Catalogue
 python generate_pdf.py
-
-
 Output:
 
 catalogue.pdf
-
-🧠 How to Update the Catalogue
-✔ Add or replace images
-
-Drop new images into images/
+🔁 Updating the Catalogue
+✔ Replace or add images
+Drop images into images/
 
 Keep filenames unchanged
 
 Re-run generate_pdf.py
 
-✔ Update text or dimensions
-
+✔ Update text or data
 Edit master_products.xlsx
 
 Re-run generate_pdf.py
 
 No manual PDF editing required.
 
-✅ Design Decisions (Why this works)
-
+🧠 Design Decisions
 Rule-based content instead of AI at scale
 
-Avoids API limits and partial outputs
+HTML tables instead of CSS Grid (wkhtmltopdf compatibility)
 
-HTML tables instead of CSS grid
+Fixed layout to prevent overlapping
 
-Required for reliable wkhtmltopdf rendering
+Repeatable, deterministic output
 
-Image placeholders
-
-Prevent layout breakage
-
-Repeatable pipeline
-
-Same input → same output, every time
+This ensures client-safe, print-safe PDFs every time.
 
 📌 Limitations
+Optimized for A4 paper size
 
-PDF layout is optimized for A4
+Images must be supplied manually for best quality
 
-Images must be provided manually for best quality
-
-AI-based text generation is intentionally avoided in the final stage for stability
+AI generation is intentionally avoided in final output for reliability
 
 🚀 Use Cases
+Product catalogues
 
-Salon & beauty equipment catalogues
+Vendor / BOQ documentation
 
-Industrial product listings
+Salon & beauty equipment listings
 
-Vendor or BOQ-based catalogues
+Industrial product brochures
 
-Internal procurement documents
+Procurement documentation
 
-Client-facing product brochures
-
-📜 License
-
-This project is intended for internal, educational, or commercial catalogue generation.
-Modify and extend as needed for your use case.
