@@ -22,22 +22,25 @@ It supports **partial images, standardized descriptions, stable layouts**, and *
 
 ## 🏗️ Project Structure
 
+## 🏗️ Project Structure
+
+```text
 catalogue_project/
-│
 ├── data/
-│ └── master_products.xlsx
+│   └── master_products.xlsx
 │
 ├── images/
-│ └── P001_product_name.jpg
+│   └── P001_product_name.jpg
 │
 ├── templates/
-│ └── catalogue.html
+│   └── catalogue.html
 │
 ├── generate_pdf.py
 ├── fix_missing_descriptions.py
 ├── fix_missing_dimensions.py
 │
 └── catalogue.pdf
+
 
 
 ---
