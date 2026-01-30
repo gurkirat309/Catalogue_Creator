@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Product Catalogue</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 10mm;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 10mm;
+    }
+
+    h2 {
+        margin: 5mm 0;
+    }
+
+    table.page {
+        width: 100%;
+        border-collapse: collapse;
+        page-break-after: always;
+    }
+
+    td.product {
+        border: 1px solid #ccc;
+        height: 130mm; /* HALF OF A4 PAGE */
+        vertical-align: top;
+        padding: 8mm;
+    }
+
+    table.inner {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    td.image-cell {
+        width: 45%;
+        border: 1px solid #ddd;
+        height: 110mm;
+        text-align: center;
+        vertical-align: middle;
+        background: #fafafa;
+    }
+
+    td.image-cell img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+    td.content-cell {
+        width: 55%;
+        padding-left: 8mm;
+        vertical-align: top;
+        font-size: 12px;
+    }
+
+    .name {
+        font-weight: bold;
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+
+    .desc {
+        margin-bottom: 6px;
+    }
+
+    .features {
+        margin-bottom: 6px;
+    }
+
+    .dimensions {
+        font-size: 11px;
+        color: #444;
+    }
+
+    @page {
+        size: A4;
+        margin: 10mm;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>Product Catalogue</h1>
+
+{% for category, items in products.items() %}
+<h2>{{ category }}</h2>
+
+{% for chunk in items|batch(2) %}
+<table class="page">
+    {% for product in chunk %}
+    <tr>
+        <td class="product">
+            <table class="inner">
+                <tr>
+                    <td class="image-cell">
+                        {% if product.Image_Path %}
+                            <img src="{{ product.Image_Path }}">
+                        {% endif %}
+                    </td>
+                    <td class="content-cell">
+                        <div class="name">{{ product.Product_Name }}</div>
+                        <div class="desc">{{ product.Description }}</div>
+                        <div class="features">{{ product.Features }}</div>
+                        <div class="dimensions">
+                            <b>Dimensions:</b> {{ product.Dimensions }}
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endfor %}
+
+{% endfor %}
+
+</body>
+</html>
