@@ -146,7 +146,7 @@ Fixed layout to prevent overlapping
 Repeatable, deterministic output
 
 This ensures client-safe, print-safe PDFs every time.
-
+```
 📌 Limitations
 Optimized for A4 paper size
 
