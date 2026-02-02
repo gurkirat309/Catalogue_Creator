@@ -47,7 +47,7 @@ catalogue_project/
 
 
 
-## 📥 Input Requirements
+
 
 ### 1️⃣ Excel File (`master_products.xlsx`)
 
