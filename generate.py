@@ -82,6 +82,6 @@ df_final.columns = [
 
 df_final.to_excel(OUTPUT_FILE, index=False)
 
-print("✅ STEP 1 COMPLETE")
-print("📄 Output file created → data/master_products.xlsx")
+# print("✅ STEP 1 COMPLETE")
+print("Output file created → data/master_products.xlsx")
 print(f"📦 Total products processed: {len(df_final)}")
