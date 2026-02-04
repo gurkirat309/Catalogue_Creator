@@ -15,7 +15,7 @@ print("📌 Raw shape:", df.shape)
 
 df = df.rename(columns={
     1: "product_name",
-    2: "quantity"
+    
 })
 
 # Drop rows where product name is missing
