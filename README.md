@@ -147,12 +147,7 @@ Repeatable, deterministic output
 
 This ensures client-safe, print-safe PDFs every time.
 ```
-📌 Limitations
-Optimized for A4 paper size
 
-Images must be supplied manually for best quality
-
-AI generation is intentionally avoided in final output for reliability
 
 🚀 Use Cases
 Product catalogues
