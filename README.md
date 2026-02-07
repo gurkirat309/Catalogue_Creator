@@ -47,7 +47,7 @@ catalogue_project/
 
 
 
-
+---
 
 ### 1️⃣ Excel File (`master_products.xlsx`)
 
