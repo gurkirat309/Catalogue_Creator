@@ -32,7 +32,7 @@ def assign_category(name):
     name = name.lower()
     if any(x in name for x in ["bed", "chair", "stool", "table"]):
         return "Furniture"
-    if any(x in name for x in ["machine", "steamer", "remover", "heater", "unit"]):
+    if any(x in name for x in ["machine", "steamer", "remover", "heater"]):
         return "Machine"
     if any(x in name for x in ["brush", "roller"]):
         return "Accessory"
