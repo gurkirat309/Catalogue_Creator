@@ -36,7 +36,7 @@ def assign_category(name):
         return "Machine"
     if any(x in name for x in ["brush", "roller"]):
         return "Accessory"
-    if any(x in name for x in ["cream", "gel", "wax"]):
+    if any(x in name for x in ["cream", "wax"]):
         return "Consumable"
     return "Tool"
 
