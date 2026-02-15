@@ -9,7 +9,7 @@ def generate_description(name, category, sub_category):
     sub_category = str(sub_category).lower()
 
     if category == "furniture":
-        return f"{name} is designed for professional salon and spa environments, offering stable construction, ergonomic support, and suitability for regular commercial use."
+        return f"{name} is designed for environments, offering stable construction, ergonomic support, and suitability for regular commercial use."
 
     if category == "machine":
         return f"{name} is a professional-use device intended for salon and beauty applications, providing reliable performance and ease of operation."
@@ -18,10 +18,10 @@ def generate_description(name, category, sub_category):
         return f"{name} is a practical salon tool designed for routine beauty and grooming tasks, suitable for daily professional use."
 
     if category == "accessory":
-        return f"{name} is a salon accessory intended to support beauty procedures and improve workflow efficiency."
+        return f"{name} intended to support beauty procedures and improve workflow efficiency."
 
     if category == "consumable":
-        return f"{name} is a consumable salon item designed for regular professional usage."
+        return f"{name} is a consumable item designed for regular professional usage."
 
     return f"{name} is designed for general professional salon use."
 
