@@ -87,7 +87,7 @@ for idx, row in tqdm(df.iterrows(), total=len(df)):
     try:
         img_url = fetch_image_url(query)
         if not img_url:
-            print(f"⚠️ No image found for: {product_name}")
+            print(f" No image found for the given product : {product_name}")
             continue
 
         img_response = requests.get(img_url, timeout=REQUEST_TIMEOUT)
