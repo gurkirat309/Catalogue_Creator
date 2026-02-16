@@ -47,4 +47,4 @@ pdfkit.from_file(
 
 os.remove(temp_html)
 
-print("Catalogue generated fil;e names as catalogue.pdf")
+print("Catalogue generated file names as catalogue6.pdf")
