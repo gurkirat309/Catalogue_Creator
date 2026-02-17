@@ -6,7 +6,7 @@ import os
 
 DATA_PATH = "data/master_products.xlsx"
 TEMPLATE_DIR = "templates"
-OUTPUT_PDF = "catalogue3.pdf"
+OUTPUT_PDF = "catalogue5.pdf"
 
 config = pdfkit.configuration(
     wkhtmltopdf=r"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe"
