@@ -6,7 +6,7 @@ OUTPUT_FILE = "data/master_products.xlsx"
 # Load Excel WITHOUT headers
 df = pd.read_excel(INPUT_FILE, header=None)
 
-print("📌 Raw shape:", df.shape)
+print("Raw shape:", df.shape)
 
 # Assume BOQ format:
 # Column 0 → SR NO (or junk)
