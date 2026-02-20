@@ -18,9 +18,7 @@ It supports **partial images, standardized descriptions, stable layouts**, and *
 - 🧱 Blank image placeholders when photos are missing  
 - 🔁 Fully re-generatable (no manual PDF edits)
 
----
 
-## 🏗️ Project Structure
 
 
 
