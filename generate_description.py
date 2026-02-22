@@ -45,7 +45,7 @@ Category: {row['Category']}
 Sub Category: {row['Sub_Category']}
 
 Tasks:
-1. Write a neutral professional description (40–60 words).
+1. Write a neutral professional description (70–80 words).
 2. Provide 3–5 concise bullet-point features.
 3. Give approximate industry-standard dimensions based on category.
 
