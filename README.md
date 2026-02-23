@@ -13,8 +13,7 @@ It supports **partial images, standardized descriptions, stable layouts**, and *
 - 🖼️ Automatic + manual image handling  
 - 📝 Rule-based product descriptions & features  
 - 📐 Standardized industry dimensions  
-- 📄 Stable PDF output (A4, print-ready)  
-- 📑 **Exactly 2 products per page**  
+- 📄 Stable PDF output (A4, print-ready)    
 - 🧱 Blank image placeholders when photos are missing  
 - 🔁 Fully re-generatable (no manual PDF edits)
 
