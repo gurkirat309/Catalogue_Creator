@@ -11,9 +11,9 @@ def default_dimensions(category, sub_category):
     # Furniture
     if category == "furniture":
         if "chair" in sub_category:
-            return "Approx. 110–130 cm (H) × 55–65 cm (W) × 85–95 cm (D)"
+            return "Approx. 110–160 cm (H) × 55–65 cm (W) × 85–95 cm (D)"
         if "bed" in sub_category:
-            return "Approx. 180–190 cm (L) × 60–70 cm (W) × 65–75 cm (H)"
+            return "Approx. 180–1200 cm (L) × 60–70 cm (W) × 65–75 cm (H)"
         if "stool" in sub_category:
             return "Approx. 45–60 cm (H) × 35–40 cm (Dia)"
         return "Approx. standard furniture dimensions"
