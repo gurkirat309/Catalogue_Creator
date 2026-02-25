@@ -9,7 +9,7 @@ def generate_description(name, category, sub_category):
     sub_category = str(sub_category).lower()
 
     if category == "furniture":
-        return f"{name} is designed for environments, offering stable construction, ergonomic support, and suitability for regular commercial use."
+        return f"{name} is designed for environments, offering stable and construction, ergonomic support, and suitability for regular commercial use."
 
     if category == "machine":
         return f"{name} is a professional-use device intended for salon and beauty applications, providing reliable performance and ease of operation."
