@@ -12,7 +12,7 @@ def generate_description(name, category, sub_category):
         return f"{name} is designed for environments, offering stable and construction, ergonomic support, and suitability for regular commercial use."
 
     if category == "machine":
-        return f"{name} providing reliable performance and ease of operation."
+        return f"{name} Provides performance with respect to the products."
 
     if category == "tool":
         return f"{name} is a practical salon tool designed for routine beauty and grooming tasks, suitable for daily professional use."
