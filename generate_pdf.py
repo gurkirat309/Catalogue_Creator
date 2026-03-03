@@ -29,7 +29,7 @@ with open(temp_html, "w", encoding="utf-8") as f:
     f.write(html_content)
 
 options = {
-    "page-size": "A4",
+    "page-size": "A4-A5",
     "margin-top": "10mm",
     "margin-bottom": "10mm",
     "margin-left": "10mm",
