@@ -67,7 +67,7 @@ df["Notes"] = ""
 
 # Final output
 df_final = df[
-    ["Product_ID", "product_name", "Category", "Sub_Category", "quantity", "Image_Query", "Notes"]
+    ["Product_ID", "product_name", "Category", "Sub_Category", "quantity", "Image_Query", "Notes","Notes"]
 ]
 
 df_final.columns = [
