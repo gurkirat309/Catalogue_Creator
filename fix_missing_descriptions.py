@@ -44,7 +44,7 @@ def generate_features(category, sub_category):
     if category == "consumable":
         return "• Suitable for professional use\n• Standard commercial quality"
 
-    return "• Suitable for professional use"
+    return "• NONE"
 
 filled_desc = 0
 filled_feat = 0
