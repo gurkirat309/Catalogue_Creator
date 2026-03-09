@@ -68,7 +68,7 @@ def fetch_image_url(query: str) -> str | None:
 # =========================
 # MAIN LOOP
 # =========================
-print("🚀 Starting image fetch...")
+print("Starting image fetch.....")
 
 for idx, row in tqdm(df.iterrows(), total=len(df)):
 
@@ -108,5 +108,5 @@ for idx, row in tqdm(df.iterrows(), total=len(df)):
 # =========================
 df.to_excel(DATA_PATH, index=False)
 
-print("✅ Image fetching complete.")
-print("📄 master_products.xlsx updated with Image_Path")
+print("Image fetching complete.")
+print("Master_products.xlsx updated with Image_Path")
