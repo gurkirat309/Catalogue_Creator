@@ -30,7 +30,7 @@ df["quantity"] = pd.to_numeric(df["quantity"], errors="coerce").fillna(1).astype
 # Category logic
 def assign_category(name):
     name = name.lower()
-    if any(x in name for x in ["bed", "chair", "stool", "table"]):
+    if any(x in name for x in ["bed", "chair", "stool", "table","sofa"]):
         return "Furniture"
     if any(x in name for x in ["machine", "steamer", "remover", "heater","GEASER"]):
         return "Machine"
