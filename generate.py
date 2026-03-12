@@ -43,7 +43,7 @@ def assign_category(name):
 def assign_subcategory(name):
     name = name.lower()
     if "bed" in name:
-        return "Bed"
+        return "bed"
     if "chair" in name:
         return "Chair"
     if "brush" in name:
