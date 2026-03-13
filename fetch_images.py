@@ -16,7 +16,7 @@ DATA_PATH = "data/master_products.xlsx"
 IMAGE_DIR = "images"
 
 REQUEST_TIMEOUT = 30
-SLEEP_BETWEEN_REQUESTS = 1  # seconds (avoid rate limits)
+SLEEP_BETWEEN_REQUESTS = 2  # seconds (avoid rate limits)
 
 # =========================
 # SETUP
