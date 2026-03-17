@@ -100,7 +100,7 @@ for idx, row in tqdm(df.iterrows(), total=len(df)):
 
     except ResourceExhausted:
         # 🔴 QUOTA HIT — WAIT & RETRY SAME ITEM
-        print("⏳ Quota hit. Waiting before retry...")
+        print("Please retry in some time-----insuffisent credits.")
         time.sleep(QUOTA_SLEEP)
         continue
 
